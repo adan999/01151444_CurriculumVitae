@@ -1,0 +1,50 @@
+body{
+
+}
+h1{
+    text-align: center;
+    background-color: limegreen;
+    color: white;
+    padding: 2%;
+    font-family: "Book Antiqua";
+    border: 2px double greenyellow;
+}
+.sub{
+    text-align: center;
+    background-color: dodgerblue;
+    color: white;
+    font-family: "Arial Rounded MT Bold";
+    border: 2px ridge black;
+}
+#dat{
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    font-family: "Arial Black";
+    font-size: 20px;
+    background-color: lightgray;
+    border-radius: 5%;
+}
+#foto{
+    float: left;
+    margin: 10px;
+    height: auto;
+    width: 30%;
+    align: center;
+    border-radius: 25px;
+    border: 2px ridge black;
+}
+#datos{
+    text-align: center;
+}
+.dato{
+    font-size: 15px;
+    font-family: "Arial Black";
+    border: 2px double darkblue;
+}
+.con{
+    font-size: 15px;
+    font-family: "Arial Black";
+    text-align: center;
+    border: 2px dotted darkblue;
+}

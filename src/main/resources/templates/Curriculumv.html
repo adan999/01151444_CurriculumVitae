@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="..static/css/cv.css" th:href="@{/css/cv.css}" rel="stylesheet"/>
+    <title>Curriculum Vitae</title>
+</head>
+<body>
+<header>
+<h1 id="titulo">Curriculum Vitae</h1>
+</header>
+<section>
+<h2 class="sub">Datos Personales</h2>
+<div id="dat">
+    <img id="foto" th:src="@{${cv.foto}}"/>
+    <br>
+    <div th:text="${'Nombre: '+cv.nombre+' '+cv.apellidoP+' '+cv.apellidoM}"></div>
+    <br>
+    <div th:text="${'Fecha de Nacimiento: '+cv.fechaNac}"}></div>
+    <br>
+    <div th:text="${'Nacionalidad: '+cv.nacionalidad}"}></div>
+    <br>
+    <div th:text="${'Telefono: '+cv.telefono}"}></div>
+    <br>
+    <div th:text="${'Email: '+cv.email}"}></div>
+    <br>
+</div>
+</section>
+<section>
+    <h2 class="sub">Educacion y Formacion</h2>
+    <div class="dato">
+    <tr th:each="estudios : ${cv.estudios}">
+        <td><span th:text="${estudios}"> - </span></td>
+        <br>
+    </tr>
+</div>
+
+    <h2 class="sub">Experiencia Laboral y Profesional</h2>
+    <div class="dato">
+    <tr th:each="empleos : ${cv.empleos}">
+        <td><span th:text="${empleos}"> - </span></td>
+        <br>
+    </tr>
+</div>
+    <h2 class="sub">Habilidades y Conocimientos</h2>
+    <div class="con">
+        <tr th:each="conocimientos : ${cv.conocimientos}">
+            <td>*<span th:text="${conocimientos}"> - </span></td>
+            <br>
+        </tr>
+    </div>
+    <h2 class="sub">Idiomas</h2>
+    <div class="con">
+        <tr th:each="idiomas : ${cv.idiomas}">
+            <td>*<span th:text="${idiomas}"> - </span></td>
+            <br>
+        </tr>
+    </div>
+</section>
+</body>
+</html>
